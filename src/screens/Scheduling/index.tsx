@@ -23,7 +23,7 @@ import { useNavigation } from '@react-navigation/native';
 
 export function Scheduling() {
   const theme = useTheme();
-  const navigation = useNavigation();
+  const navigation = useNavigation<any>();
 
   function handleConfirmRental() {
     navigation.navigate('SchedulingDetails');

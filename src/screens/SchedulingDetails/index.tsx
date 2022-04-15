@@ -45,7 +45,7 @@ import {
 
 export function SchedulingDetails() {
   const theme = useTheme();
-  const navigation = useNavigation();
+  const navigation = useNavigation<any>();
 
   function handleConfirmRental() {
     navigation.navigate('SchedulingComplete');

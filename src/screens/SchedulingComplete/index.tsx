@@ -17,7 +17,7 @@ import {
 
 export function SchedulingComplete() {
   const { width } = useWindowDimensions();
-  const navigation = useNavigation();
+  const navigation = useNavigation<any>();
 
   function handleConfirm() {
     navigation.navigate('Home');
