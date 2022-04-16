@@ -124,7 +124,7 @@ export const CalendarIcon = styled.View`
 export const DateInfo = styled.View``;
 
 export const DateTitle = styled.Text`
-  font-family: ${({ theme }) => theme.fonts.primaty_500};
+  font-family: ${({ theme }) => theme.fonts.primary_500};
   color: ${({ theme }) => theme.colors.text_detail};
   font-size: ${RFValue(10)}px;
 
@@ -132,7 +132,7 @@ export const DateTitle = styled.Text`
 `;
 
 export const DateValue = styled.Text`
-  font-family: ${({ theme }) => theme.fonts.primaty_500};
+  font-family: ${({ theme }) => theme.fonts.primary_500};
   color: ${({ theme }) => theme.colors.title};
   font-size: ${RFValue(15)}px;
 `;
@@ -143,7 +143,7 @@ export const RentalPrice = styled.View`
 `;
 
 export const RentalPriceLabel = styled.Text`
-  font-family: ${({ theme }) => theme.fonts.primaty_500};
+  font-family: ${({ theme }) => theme.fonts.primary_500};
   color: ${({ theme }) => theme.colors.text_detail};
   font-size: ${RFValue(10)}px;
 
@@ -158,7 +158,7 @@ export const RentalPriceDetails = styled.View`
 `;
 
 export const RentalPriceQuota = styled.Text`
-  font-family: ${({ theme }) => theme.fonts.primaty_500};
+  font-family: ${({ theme }) => theme.fonts.primary_500};
   color: ${({ theme }) => theme.colors.title};
   font-size: ${RFValue(15)}px;
 `;

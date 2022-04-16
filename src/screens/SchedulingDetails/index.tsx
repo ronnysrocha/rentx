@@ -70,6 +70,11 @@ export function SchedulingDetails() {
       ...dates,
     ]
 
+    await api.post('/schedules_byuser', {
+      user_id: 1,
+      car
+    })
+
     api.put(`/schedules_bycars/${car.id}`, {
       id: car.id,
       unavailable_dates
@@ -154,7 +159,7 @@ export function SchedulingDetails() {
 
           <DateInfo>
             <DateTitle>ATÉ</DateTitle>
-            <DateValue>{rentalPeriod.end}}</DateValue>
+            <DateValue>{rentalPeriod.end}</DateValue>
           </DateInfo>
         </RentalPeriod>
 

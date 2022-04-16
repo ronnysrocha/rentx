@@ -59,7 +59,7 @@ function Calendar({markedDates, onDayPress} : CalendarProps) {
 
         theme={{
           textDayFontFamily: theme.fonts.primary_400,
-          textDayHeaderFontFamily: theme.fonts.primaty_500,
+          textDayHeaderFontFamily: theme.fonts.primary_500,
           textDayHeaderFontSize: 10,
           textMonthFontFamily: theme.fonts.secondary_600,
           textMonthFontSize: 20,
