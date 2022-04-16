@@ -5,6 +5,7 @@ import { useNavigation, useRoute } from '@react-navigation/native';
 import { format } from 'date-fns';
 import { getPlatformDate } from '../../utils/getPlataformDate';
 
+
 import { BackButton } from '../../components/BackButton';
 import { ImageSlider } from '../../components/ImageSlider';
 import { Accessory } from '../../components/Accessory';
@@ -72,7 +73,9 @@ export function SchedulingDetails() {
 
     await api.post('/schedules_byuser', {
       user_id: 1,
-      car
+      car,
+      startDate: format(getPlatformDate(new Date(dates[0])), 'dd/MM/yyyy'),
+      endDate: format(getPlatformDate(new Date(dates[dates.length - 1])), 'dd/MM/yyyy'),
     })
 
     api.put(`/schedules_bycars/${car.id}`, {
