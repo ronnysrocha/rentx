@@ -1,12 +1,14 @@
 import React from 'react';
 import { StatusBar } from 'react-native';
 import { Button } from '../../components/Button';
+import { Input } from '../../components/Input';
 import theme from '../../styles/theme';
 
 import {
   Container,
   Header,
   Title,
+  Form,
   SubTitle,
   Footer
 } from './styles';
@@ -28,6 +30,16 @@ export function SignIn() {
           Faça seu login para começar{'\n'}uma experiência incrível.
         </SubTitle>
       </Header>
+
+      <Form>
+        <Input
+          iconName='mail'
+          placeholder='E-mail'
+          keyboardType='email-address'
+          autoCorrect={false}
+          autoCapitalize="none"
+        />
+      </Form>
 
       <Footer>
         <Button
