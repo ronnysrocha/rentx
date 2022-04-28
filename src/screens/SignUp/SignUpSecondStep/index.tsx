@@ -8,8 +8,11 @@ import {
 import { useNavigation, useRoute } from '@react-navigation/native';
 import { useTheme } from 'styled-components';
 
+import { Confirmation } from '../../Confirmation'
 import { BackButton } from '../../../components/BackButton'
 import { Bullet } from '../../../components/Bullet';
+import { PasswordInput } from '../../../components/PasswordInput';
+import { Button } from '../../../components/Button';
 
 import {
   Container,
@@ -20,8 +23,6 @@ import {
   Form,
   FormTitle,
 } from './styles';
-import { PasswordInput } from '../../../components/PasswordInput';
-import { Button } from '../../../components/Button';
 
 interface Params {
   user: {
@@ -35,7 +36,7 @@ export function SignUpSecondStep() {
   const [password, setPassword] = useState('');
   const [passwordConfirm, setPasswordConfirm] = useState('');
 
-  const navigation = useNavigation();
+  const navigation = useNavigation<any>();
   const route = useRoute();
   const theme = useTheme();
 
@@ -47,12 +48,18 @@ export function SignUpSecondStep() {
 
   function handleRegister() {
     if (!password || !passwordConfirm) {
-      Alert.alert('Informe a senha e a confirmação');
+      return Alert.alert('Informe a senha e a confirmação');
     }
 
     if (password != passwordConfirm) {
-      Alert.alert('As senhas não são iguais');
+      return Alert.alert('As senhas não são iguais');
     }
+
+    navigation.navigate('Confirmation', {
+      nextScreenRoute: 'SignIn',
+      title: 'Conta Criada!',
+      message: `Agora é só fazer login\ne aproveitar.`
+    })
   }
 
   return (
