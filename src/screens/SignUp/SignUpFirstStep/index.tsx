@@ -22,7 +22,6 @@ import {
 } from './styles';
 import { Input } from '../../../components/Input';
 import { Button } from '../../../components/Button';
-import { useAuth } from '../../../hooks/auth';
 
 export function SignUpFirstStep() {
   const [name, setName] = useState('');
@@ -30,8 +29,6 @@ export function SignUpFirstStep() {
   const [driverLicense, setDriverLicense] = useState('');
   
   const navigation = useNavigation<any>();
-  const { user } = useAuth();
-  console.log('USUARIO AUTENTICADO', user);
 
   function handleBack() {
     navigation.goBack();
